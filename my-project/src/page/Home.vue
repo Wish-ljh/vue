@@ -28,7 +28,7 @@ import indexLogo from  '../assets/images/indexLogo.png';
     data () {
       return {
         isCollapse: false,
-        isShowImg:indexLogo
+        isShowImg:indexLogoHide
       }
     },
     created(){
@@ -42,7 +42,7 @@ import indexLogo from  '../assets/images/indexLogo.png';
         this.isCollapse = !this.isCollapse;
         if(!this.isCollapse){
           setTimeout(()=>{
-            this.isShowImg=indexLogo;
+            this.isShowImg=indexLogoHide;
           },300)
         }else{
           this.isShowImg=indexLogoHide;
@@ -88,7 +88,7 @@ import indexLogo from  '../assets/images/indexLogo.png';
 
   }
   .el-menu{
-    height: 100%;
+    height: calc(100% - 60px);
   }
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
